@@ -58,7 +58,7 @@ nav{display:flex;align-items:center;justify-content:space-between;height:70px;ma
 
 /* MARQUEE */
 .marquee{background:var(--gold);overflow:hidden;padding:12px 0;white-space:nowrap;}
-.marquee-track{display:inline-flex;gap:48px;animation:scrollLeft 24s linear infinite;}
+.marquee-track{display:inline-flex;gap:48px;animation:scrollLeft 24s linear infinite;will-change:transform;}
 .marquee span{font-size:14px;letter-spacing:.05em;color:var(--navy);font-weight:500;}
 @keyframes scrollLeft{from{transform:translateX(0);}to{transform:translateX(-50%);}}
 

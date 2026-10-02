@@ -12,7 +12,10 @@
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap" as="style">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet"></noscript>
+<link rel="preload" href="style.css" as="style">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -42,7 +45,7 @@
 </div>
 
 <section class="hero" id="top">
-  <video src="hero_video.mp4" autoplay loop muted playsinline class="hero-bg-video"></video>
+  <video src="hero_video.mp4" autoplay loop muted playsinline poster="photo-1.webp" class="hero-bg-video"></video>
   <div class="hero-word">ЧАЙКА</div>
   <div class="wrap">
     <div>
@@ -94,9 +97,9 @@
       </div>
     </div>
     <div class="about-gallery reveal">
-      <img src="photo-1.webp" alt="Фото клубу 1">
-      <img src="photo-2.webp" alt="Фото клубу 2">
-      <img src="photo-3.webp" alt="Фото клубу 3">
+      <img src="photo-1.webp" loading="lazy" width="600" height="400" alt="Фото клубу 1">
+      <img src="photo-2.webp" loading="lazy" width="600" height="400" alt="Фото клубу 2">
+      <img src="photo-3.webp" loading="lazy" width="600" height="400" alt="Фото клубу 3">
     </div>
   </div>
 </section>
@@ -186,7 +189,7 @@
       <div class="team-carousel" id="teamCarousel">
         <div class="player">
           <div class="player-img">
-            <img src="player-16.webp" alt="Благославенний Владислав">
+            <img src="player-16.webp" loading="lazy" width="300" height="400" alt="Благославенний Владислав">
             <span class="num">16</span>
           </div>
           <div class="player-info">
@@ -198,7 +201,7 @@
         <!-- Шаблон для наступних гравців -->
         <div class="player">
           <div class="player-img">
-            <img src="player-52.webp" alt="Маслов Василь">
+            <img src="player-52.webp" loading="lazy" width="300" height="400" alt="Маслов Василь">
             <span class="num">52</span>
           </div>
           <div class="player-info">
@@ -209,7 +212,7 @@
         
         <div class="player">
           <div class="player-img">
-            <img src="player-4.webp" alt="Мартиневич Любомир">
+            <img src="player-4.webp" loading="lazy" width="300" height="400" alt="Мартиневич Любомир">
             <span class="num">4</span>
           </div>
           <div class="player-info">
@@ -220,7 +223,7 @@
         
         <div class="player">
           <div class="player-img">
-            <img src="player-1.webp" alt="Радомський Клим">
+            <img src="player-1.webp" loading="lazy" width="300" height="400" alt="Радомський Клим">
             <span class="num">1</span>
           </div>
           <div class="player-info">
@@ -231,7 +234,7 @@
         
         <div class="player">
           <div class="player-img">
-            <img src="player-15.webp" alt="Благославенний Олег">
+            <img src="player-15.webp" loading="lazy" width="300" height="400" alt="Благославенний Олег">
             <span class="num">15</span>
           </div>
           <div class="player-info">
@@ -242,7 +245,7 @@
         
         <div class="player">
           <div class="player-img">
-            <img src="player-5.webp" alt="Пекар Назар">
+            <img src="player-5.webp" loading="lazy" width="300" height="400" alt="Пекар Назар">
             <span class="num">5</span>
           </div>
           <div class="player-info">
@@ -253,7 +256,7 @@
         
         <div class="player">
           <div class="player-img">
-            <img src="player-8.webp" alt="Єпіфанов Дмитро">
+            <img src="player-8.webp" loading="lazy" width="300" height="400" alt="Єпіфанов Дмитро">
             <span class="num">8</span>
           </div>
           <div class="player-info">
@@ -264,7 +267,7 @@
         
         <div class="player">
           <div class="player-img">
-            <img src="player-11.webp" alt="Ясніцький Олександр">
+            <img src="player-11.webp" loading="lazy" width="300" height="400" alt="Ясніцький Олександр">
             <span class="num">11</span>
           </div>
           <div class="player-info">
@@ -275,7 +278,7 @@
         
         <div class="player">
           <div class="player-img">
-            <img src="player-69.webp" alt="Гладишев Андрій">
+            <img src="player-69.webp" loading="lazy" width="300" height="400" alt="Гладишев Андрій">
             <span class="num">69</span>
           </div>
           <div class="player-info">
@@ -286,7 +289,7 @@
         
         <div class="player">
           <div class="player-img">
-            <img src="player-67.webp" alt="Баленко Данило">
+            <img src="player-67.webp" loading="lazy" width="300" height="400" alt="Баленко Данило">
             <span class="num">67</span>
           </div>
           <div class="player-info">
@@ -319,7 +322,7 @@
         
         <div class="player">
           <div class="player-img">
-            <img src="player-7.webp" alt="Вдовиченко Григорій">
+            <img src="player-7.webp" loading="lazy" width="300" height="400" alt="Вдовиченко Григорій">
             <span class="num">7</span>
           </div>
           <div class="player-info">
@@ -330,7 +333,7 @@
         
         <div class="player">
           <div class="player-img">
-            <img src="player-rudyk.webp" alt="Рудик Вікторія">
+            <img src="player-rudyk.webp" loading="lazy" width="300" height="400" alt="Рудик Вікторія">
             <span class="num"></span>
           </div>
           <div class="player-info">
@@ -341,7 +344,7 @@
         
         <div class="player">
           <div class="player-img">
-            <img src="player-dobarina.webp" alt="Добаріна Анастасія">
+            <img src="player-dobarina.webp" loading="lazy" width="300" height="400" alt="Добаріна Анастасія">
             <span class="num"></span>
           </div>
           <div class="player-info">
@@ -352,7 +355,7 @@
         
         <div class="player">
           <div class="player-img">
-            <img src="player-karpovych.webp" alt="Карпович Вероніка">
+            <img src="player-karpovych.webp" loading="lazy" width="300" height="400" alt="Карпович Вероніка">
             <span class="num"></span>
           </div>
           <div class="player-info">
@@ -363,7 +366,7 @@
         
         <div class="player">
           <div class="player-img">
-            <img src="player-kravets.webp" alt="Кравець Вікторія">
+            <img src="player-kravets.webp" loading="lazy" width="300" height="400" alt="Кравець Вікторія">
             <span class="num"></span>
           </div>
           <div class="player-info">
@@ -374,7 +377,7 @@
         
         <div class="player">
           <div class="player-img">
-            <img src="player-hrytsai.webp" alt="Грицай Вікторія">
+            <img src="player-hrytsai.webp" loading="lazy" width="300" height="400" alt="Грицай Вікторія">
             <span class="num"></span>
           </div>
           <div class="player-info">
