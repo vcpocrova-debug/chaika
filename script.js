@@ -53,8 +53,33 @@ if (toggleBtn && teamList) {
 
         const row = document.createElement('div');
         row.className = 'player-row';
-        const avatarHtml = imgSrc && !imgSrc.includes('000') ? `<img src="${imgSrc}" class="row-avatar" alt="">` : `<div class="row-avatar empty-avatar"></div>`;
-        row.innerHTML = `<span class="row-num">${num}</span>${avatarHtml}<span class="row-name">${name}</span><span class="row-pos">${pos}</span>`;
+
+        const numSpan = document.createElement('span');
+        numSpan.className = 'row-num';
+        numSpan.textContent = num;
+        row.appendChild(numSpan);
+
+        if (imgSrc && !imgSrc.includes('000')) {
+          const avatarImg = document.createElement('img');
+          avatarImg.src = imgSrc;
+          avatarImg.className = 'row-avatar';
+          avatarImg.alt = '';
+          row.appendChild(avatarImg);
+        } else {
+          const emptyDiv = document.createElement('div');
+          emptyDiv.className = 'row-avatar empty-avatar';
+          row.appendChild(emptyDiv);
+        }
+
+        const nameSpan = document.createElement('span');
+        nameSpan.className = 'row-name';
+        nameSpan.textContent = name;
+        row.appendChild(nameSpan);
+
+        const posSpan = document.createElement('span');
+        posSpan.className = 'row-pos';
+        posSpan.textContent = pos;
+        row.appendChild(posSpan);
 
         if (imgSrc) {
           const isDesktop = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
